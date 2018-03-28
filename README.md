@@ -4,19 +4,48 @@ A react native module to control the Keyguard.
 
 ## Setup
 
-There are five steps in the setup process
-
-1. install module
-2. update `android/settings.gradle`
-3. update `android/app/build.gradle`
-4. Register module in MainActivity.java or MainApplication.java (depending on your RN version)
-5. Rebuild and restart package manager
-
-* install module
-
-```bash
- npm i --save react-native-keyguard
 ```
+npm install react-native-interactable --save
+```
+
+* Link the native library to your project
+
+```
+react-native link react-native-interactable
+```
+
+* Rebuild app from your project root directory
+
+```
+  react-native run-android
+```
+
+## Usage
+
+```js
+import Keyguard from 'react-native-keyguard'
+
+/* 
+Keyguard returns a promise when the lockscreen is opened.
+
+Android does not provide Keyguard control before 21. 
+The promise will be resolved by default in such cases */
+
+Keyguard
+  .unlock(title, desctiption)
+  .then(() => console.log("Success"))
+  .catch(error => console.log("Error",error))
+
+```
+
+## Manual Installation
+
+
+1. update `android/settings.gradle`
+2. update `android/app/build.gradle`
+3. Register module in MainActivity.java or MainApplication.java (depending on your RN version)
+4. Rebuild and restart package manager
+
 
 * `android/settings.gradle`
 
@@ -153,19 +182,3 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 ```
 * Run `react-native run-android` from your project root directory
 
-
-## Usage
-
-```js
-import Keyguard from 'react-native-keyguard'
-
-/* Android does not provide Keygurad control before 21. 
-It will unlock by default in such cases */
-
-
-Keyguard
-  .unlock(title, desctiption)
-  .then(()=>console.log("Success"))
-  .catch((error)=>console.log("Error",error))
-
-```
