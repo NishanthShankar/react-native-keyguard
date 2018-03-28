@@ -1,6 +1,6 @@
 {
   "name": "react-native-keyguard",
-  "description": "A react native android package to control the status bar.",
+  "description": "A react native module to control the Keyguard in Android.",
   "version": "0.1.3",
   "main": "index.android.js",
   "repository": {
