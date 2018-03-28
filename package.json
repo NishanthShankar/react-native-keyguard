@@ -1,0 +1,21 @@
+{
+  "name": "react-native-keyguard",
+  "description": "A react native android package to control the status bar.",
+  "version": "0.1",
+  "main": "index.android.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NishanthShankar/react-native-keyguard.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android"
+  ],
+  "author": "Nishanth Shankar <NishanthShankr@gmail.com>",
+  "license": "MIT",
+  "homepage": "",
+  "peerDependencies": {
+    "react-native": ">= 0.30.0"
+  }
+}
