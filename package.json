@@ -1,7 +1,7 @@
 {
   "name": "react-native-keyguard",
   "description": "A react native android package to control the status bar.",
-  "version": "0.1",
+  "version": "0.1.2g",
   "main": "index.android.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "keywords": [
     "react-component",
     "react-native",
-    "android"
+    "android",
+    "lock-screen"
   ],
   "author": "Nishanth Shankar <NishanthShankr@gmail.com>",
   "license": "MIT",
