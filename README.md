@@ -5,7 +5,7 @@ A react native module to control the Keyguard.
 ## Setup
 
 ```
-npm install react-native-interactable --save
+npm install react-native-keyguard --save
 ```
 
 * Link the native library to your project
